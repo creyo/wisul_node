@@ -20,7 +20,7 @@ const getWisulData = async (req, res) => {
     post_type(*), 
     publication(*),
      control("*")
-    `).eq("publication_id", `${publicationID}`);
+    `).eq("publication_id", `${publicationID}`).eq("status","3");
         // '*' fetches all columns, you can specify specific columns if needed
 
         if (error) {
